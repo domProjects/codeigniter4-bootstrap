@@ -1,0 +1,40 @@
+{
+    "name": "domprojects/codeigniter4-bootstrap",
+    "description": "Bootstrap 5 asset publisher for CodeIgniter 4 projects.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "codeigniter4",
+        "codeigniter",
+        "bootstrap",
+        "assets",
+        "publisher"
+    ],
+    "homepage": "https://github.com/domProjects/codeigniter4-bootstrap",
+    "support": {
+        "issues": "https://github.com/domProjects/codeigniter4-bootstrap/issues",
+        "source": "https://github.com/domProjects/codeigniter4-bootstrap"
+    },
+    "authors": [
+        {
+            "name": "domProjects",
+            "homepage": "https://github.com/domProjects",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "codeigniter4/framework": "^4.7.2",
+        "twbs/bootstrap": "^5.3.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "domProjects\\CodeIgniterBootstrap\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        }
+    }
+}
