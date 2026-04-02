@@ -111,16 +111,6 @@ If you also test the automation plugin locally, add a second `path` repository f
 
 - `domprojects/codeigniter4-bootstrap-plugin`: optional Composer plugin for automatic publication
 
-## Publish on Packagist
-
-Recommended release flow for this package:
-
-1. Push the repository to GitHub.
-2. Create a tag such as `v1.0.0`.
-3. Submit the GitHub repository URL to Packagist.
-
-If you use the automation plugin, release and publish that repository separately.
-
 ## License
 
 MIT
