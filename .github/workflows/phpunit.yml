@@ -1,5 +1,8 @@
 name: PHPUnit
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
   push:
     branches:
@@ -18,7 +21,8 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
-          coverage: none
+          extensions: intl, mbstring
+          coverage: xdebug
 
       - name: Install dependencies
         run: composer install --no-interaction --prefer-dist
