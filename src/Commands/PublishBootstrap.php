@@ -21,7 +21,7 @@ use Throwable;
 /**
  * Spark command used to publish Bootstrap distribution assets.
  */
-class PublishBootstrap extends BaseCommand
+final class PublishBootstrap extends BaseCommand
 {
     /**
      * Command group shown in the Spark command list.

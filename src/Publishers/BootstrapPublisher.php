@@ -19,7 +19,7 @@ use RuntimeException;
 /**
  * Publishes the Bootstrap runtime assets from the Composer package to `public/`.
  */
-class BootstrapPublisher extends Publisher
+final class BootstrapPublisher extends Publisher
 {
     /**
      * Default source directory inside the Bootstrap Composer package.
