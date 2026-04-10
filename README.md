@@ -1,4 +1,4 @@
-# domProjects CodeIgniter 4 Bootstrap
+# Bootstrap 5 for CodeIgniter 4
 
 Bootstrap 5 asset publisher for CodeIgniter 4.
 
