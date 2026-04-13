@@ -129,11 +129,17 @@ final class BootstrapCellsHelperTest extends CIUnitTestCase
     public function testTablePayloadBuildsHeadersRowsAndActionsFromResultLikeObject(): void
     {
         $result = new class () {
+            /**
+             * @return list<string>
+             */
             public function getFieldNames(): array
             {
                 return ['id', 'first_name', 'email'];
             }
 
+            /**
+             * @return list<array<string, int|string>>
+             */
             public function getResultArray(): array
             {
                 return [

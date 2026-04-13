@@ -35,6 +35,9 @@ if (! function_exists('bootstrap_cell_validation_errors')) {
 if (! function_exists('bootstrap_cell_validation_item')) {
     /**
      * Applies validation state and feedback to a single FormCell-like item config.
+     *
+     * @param array<string, mixed> $item
+     * @return array<string, mixed>
      */
     function bootstrap_cell_validation_item(array $item, mixed $validation = null, ?string $field = null): array
     {
@@ -70,10 +73,6 @@ if (! function_exists('bootstrap_cell_validation_items')) {
     function bootstrap_cell_validation_items(array $items, mixed $validation = null): array
     {
         foreach ($items as $index => $item) {
-            if (! is_array($item)) {
-                continue;
-            }
-
             $items[$index] = bootstrap_cell_validation_item($item, $validation);
         }
 
@@ -147,6 +146,9 @@ if (! function_exists('bootstrap_cell_form_old_value')) {
 if (! function_exists('bootstrap_cell_form_item')) {
     /**
      * Hydrates one form item with validation feedback and old submitted values.
+     *
+     * @param array<string, mixed> $item
+     * @return array<string, mixed>
      */
     function bootstrap_cell_form_item(array $item, mixed $validation = null, mixed $oldInput = null, ?string $field = null): array
     {
@@ -200,10 +202,6 @@ if (! function_exists('bootstrap_cell_form_items')) {
     function bootstrap_cell_form_items(array $items, mixed $validation = null, mixed $oldInput = null): array
     {
         foreach ($items as $index => $item) {
-            if (! is_array($item)) {
-                continue;
-            }
-
             $items[$index] = bootstrap_cell_form_item($item, $validation, $oldInput);
         }
 
@@ -216,6 +214,7 @@ if (! function_exists('bootstrap_cell_form_payload')) {
      * Builds a ready-to-use FormCell payload from field items and form options.
      *
      * @param list<array<string, mixed>> $items
+     * @param array<string, mixed> $form
      * @return array<string, mixed>
      */
     function bootstrap_cell_form_payload(array $items, mixed $validation = null, mixed $oldInput = null, array $form = []): array
@@ -266,6 +265,7 @@ if (! function_exists('bootstrap_cell_table_payload')) {
     /**
      * Builds a ready-to-use TableCell payload from a CI4 result object or row array.
      *
+     * @param array<string, mixed> $options
      * @return array<string, mixed>
      */
     function bootstrap_cell_table_payload(mixed $result, array $options = []): array
@@ -373,6 +373,7 @@ if (! function_exists('bootstrap_cell_table_rows')) {
      * Builds normalized table rows, optionally enriching them with row classes and actions.
      *
      * @param array<int, mixed> $rows
+     * @param array<string, mixed> $options
      * @return list<array<string, mixed>>
      */
     function bootstrap_cell_table_rows(array $rows, array $options = []): array

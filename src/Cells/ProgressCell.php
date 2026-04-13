@@ -72,9 +72,6 @@ final class ProgressCell extends Cell
     }
 
     /**
-     * @return list<array<string,string|int>>
-     */
-    /**
      * Normalizes one or more progress bars for rendering.
      *
      * @return list<array<string, mixed>>
@@ -109,13 +106,9 @@ final class ProgressCell extends Cell
     }
 
     /**
-     * @param array<string,mixed> $bar
-     *
-     * @return array<string,string|int>
-     */
-    /**
      * Normalizes a single progress bar definition.
      *
+     * @param array<string, mixed> $bar
      * @return array<string, mixed>
      */
     private function normalizeBar(array $bar, bool $escape): array

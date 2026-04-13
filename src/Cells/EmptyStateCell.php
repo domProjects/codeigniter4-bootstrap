@@ -58,7 +58,11 @@ final class EmptyStateCell extends Cell
     /**
      * Normalizes the actions rendered below the empty state.
      *
-     * @return list<array<string, string>>
+     * @return list<array{
+     *     tag: 'a'|'button',
+     *     html: string,
+     *     attributes: array<string, string>
+     * }>
      */
     private function normalizeActions(bool $escape): array
     {

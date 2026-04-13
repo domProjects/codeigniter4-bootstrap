@@ -115,6 +115,8 @@ final class AccordionCell extends Cell
 
     /**
      * Builds the classes applied to a single accordion item.
+     *
+     * @param array<string, mixed> $item
      */
     private function buildItemClasses(array $item): string
     {

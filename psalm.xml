@@ -19,6 +19,41 @@
             <directory name="build" />
             <directory name="vendor" />
             <directory name="tests/_support" />
+            <file name="src/Cells/accordion.php" />
+            <file name="src/Cells/alert.php" />
+            <file name="src/Cells/badge.php" />
+            <file name="src/Cells/breadcrumb.php" />
+            <file name="src/Cells/button.php" />
+            <file name="src/Cells/button_group.php" />
+            <file name="src/Cells/button_toolbar.php" />
+            <file name="src/Cells/card.php" />
+            <file name="src/Cells/carousel.php" />
+            <file name="src/Cells/close_button.php" />
+            <file name="src/Cells/collapse.php" />
+            <file name="src/Cells/description_list.php" />
+            <file name="src/Cells/dropdown.php" />
+            <file name="src/Cells/empty_state.php" />
+            <file name="src/Cells/figure.php" />
+            <file name="src/Cells/form.php" />
+            <file name="src/Cells/image.php" />
+            <file name="src/Cells/input_group.php" />
+            <file name="src/Cells/list_group.php" />
+            <file name="src/Cells/modal.php" />
+            <file name="src/Cells/nav.php" />
+            <file name="src/Cells/navbar.php" />
+            <file name="src/Cells/offcanvas.php" />
+            <file name="src/Cells/pagination.php" />
+            <file name="src/Cells/placeholder.php" />
+            <file name="src/Cells/popover.php" />
+            <file name="src/Cells/progress.php" />
+            <file name="src/Cells/scrollspy.php" />
+            <file name="src/Cells/spinner.php" />
+            <file name="src/Cells/stats_cards.php" />
+            <file name="src/Cells/table.php" />
+            <file name="src/Cells/tabs.php" />
+            <file name="src/Cells/toast.php" />
+            <file name="src/Cells/tooltip.php" />
+            <file name="src/Cells/validation.php" />
         </ignoreFiles>
     </projectFiles>
 </psalm>

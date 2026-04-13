@@ -158,6 +158,8 @@ final class ButtonGroupCell extends Cell
 
     /**
      * Builds the classes applied to an individual grouped button.
+     *
+     * @param array<string, mixed> $item
      */
     private function buildButtonClasses(array $item, bool $active, bool $disabled, string $tag): string
     {
@@ -187,6 +189,8 @@ final class ButtonGroupCell extends Cell
 
     /**
      * Resolves whether a grouped item renders as a link or a button.
+     *
+     * @param array<string, mixed> $item
      */
     private function resolveTag(array $item): string
     {

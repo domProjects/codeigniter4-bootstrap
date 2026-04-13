@@ -341,6 +341,7 @@ final class PaginationCell extends Cell
     /**
      * Normalizes a single manual pagination item.
      *
+     * @param array<string, mixed> $item
      * @return array{
      *     itemClasses:string,
      *     linkTag:string,

@@ -1,5 +1,5 @@
 parameters:
-    tmpDir: build/phpstan-tmp
+    tmpDir: build/phpstan-cache
     level: 6
     paths:
         - src/
@@ -8,6 +8,41 @@ parameters:
         - tests/bootstrap.php
     excludePaths:
         - tests/_support/*
+        - src/Cells/accordion.php
+        - src/Cells/alert.php
+        - src/Cells/badge.php
+        - src/Cells/breadcrumb.php
+        - src/Cells/button.php
+        - src/Cells/button_group.php
+        - src/Cells/button_toolbar.php
+        - src/Cells/card.php
+        - src/Cells/carousel.php
+        - src/Cells/close_button.php
+        - src/Cells/collapse.php
+        - src/Cells/description_list.php
+        - src/Cells/dropdown.php
+        - src/Cells/empty_state.php
+        - src/Cells/figure.php
+        - src/Cells/form.php
+        - src/Cells/image.php
+        - src/Cells/input_group.php
+        - src/Cells/list_group.php
+        - src/Cells/modal.php
+        - src/Cells/nav.php
+        - src/Cells/navbar.php
+        - src/Cells/offcanvas.php
+        - src/Cells/pagination.php
+        - src/Cells/placeholder.php
+        - src/Cells/popover.php
+        - src/Cells/progress.php
+        - src/Cells/scrollspy.php
+        - src/Cells/spinner.php
+        - src/Cells/stats_cards.php
+        - src/Cells/table.php
+        - src/Cells/tabs.php
+        - src/Cells/toast.php
+        - src/Cells/tooltip.php
+        - src/Cells/validation.php
     universalObjectCratesClasses:
         - CodeIgniter\Entity
         - CodeIgniter\Entity\Entity

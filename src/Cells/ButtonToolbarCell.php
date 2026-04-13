@@ -203,6 +203,8 @@ final class ButtonToolbarCell extends Cell
 
     /**
      * Builds the classes applied to an individual toolbar button.
+     *
+     * @param array<string, mixed> $item
      */
     private function buildButtonClasses(array $item, bool $active, bool $disabled, string $tag): string
     {
@@ -232,6 +234,8 @@ final class ButtonToolbarCell extends Cell
 
     /**
      * Resolves whether a toolbar item renders as a link or a button.
+     *
+     * @param array<string, mixed> $item
      */
     private function resolveTag(array $item): string
     {

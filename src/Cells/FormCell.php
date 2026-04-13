@@ -166,6 +166,7 @@ final class FormCell extends Cell
     /**
      * Normalizes a standard input field.
      *
+     * @param array<string, mixed> $item
      * @return array<string, mixed>
      */
     private function normalizeInputItem(array $item, bool $escape): array
@@ -198,6 +199,7 @@ final class FormCell extends Cell
     /**
      * Normalizes a textarea field with its Bootstrap wrapper data.
      *
+     * @param array<string, mixed> $item
      * @return array<string, mixed>
      */
     private function normalizeTextareaItem(array $item, bool $escape): array
@@ -231,6 +233,7 @@ final class FormCell extends Cell
     /**
      * Normalizes a `select` field and its options.
      *
+     * @param array<string, mixed> $item
      * @return array<string, mixed>
      */
     private function normalizeSelectItem(array $item, bool $escape): array
@@ -263,6 +266,7 @@ final class FormCell extends Cell
     /**
      * Normalizes a `checkbox`, `radio`, or `switch` control.
      *
+     * @param array<string, mixed> $item
      * @return array<string, mixed>
      */
     private function normalizeCheckItem(array $item, bool $escape, string $kind): array
@@ -292,6 +296,7 @@ final class FormCell extends Cell
     /**
      * Normalizes a simple form button item.
      *
+     * @param array<string, mixed> $item
      * @return array<string, mixed>
      */
     private function normalizeButtonItem(array $item, bool $escape, string $kind): array
@@ -331,6 +336,8 @@ final class FormCell extends Cell
 
     /**
      * Resolves the Bootstrap grid classes for a field.
+     *
+     * @param array<string, mixed> $item
      */
     private function buildColumnClasses(array $item): string
     {
@@ -360,6 +367,8 @@ final class FormCell extends Cell
 
     /**
      * Builds the wrapper classes for a standard control.
+     *
+     * @param array<string, mixed> $item
      */
     private function buildControlWrapperClasses(array $item, bool $floating): string
     {
@@ -375,6 +384,8 @@ final class FormCell extends Cell
 
     /**
      * Builds the wrapper classes for a check-like control.
+     *
+     * @param array<string, mixed> $item
      */
     private function buildCheckWrapperClasses(array $item, string $kind): string
     {
@@ -405,6 +416,8 @@ final class FormCell extends Cell
 
     /**
      * Merges default wrapper classes with caller-provided classes.
+     *
+     * @param array<string, mixed> $item
      */
     private function buildWrapperClasses(array $item, string $default): string
     {
@@ -426,6 +439,7 @@ final class FormCell extends Cell
     /**
      * Builds the attributes for a field label.
      *
+     * @param array<string, mixed> $item
      * @return array<string, string>
      */
     private function buildLabelAttributes(array $item, bool $floating = false): array
@@ -450,6 +464,7 @@ final class FormCell extends Cell
     /**
      * Builds the attributes for a checkbox or radio label.
      *
+     * @param array<string, mixed> $item
      * @return array<string, string>
      */
     private function buildCheckLabelAttributes(array $item): array
@@ -470,6 +485,7 @@ final class FormCell extends Cell
     /**
      * Builds the attributes for a field help block.
      *
+     * @param array<string, mixed> $item
      * @return array<string, string>
      */
     private function buildHelpAttributes(array $item): array
@@ -490,6 +506,7 @@ final class FormCell extends Cell
     /**
      * Builds the attributes for Bootstrap validation feedback blocks.
      *
+     * @param array<string, mixed> $item
      * @return array<string, string>
      */
     private function buildFeedbackAttributes(array $item, string $type): array
@@ -512,6 +529,7 @@ final class FormCell extends Cell
     /**
      * Builds the HTML attributes for a standard form control.
      *
+     * @param array<string, mixed> $item
      * @return array<string, string>
      */
     private function buildControlAttributes(array $item, string $kind, bool $withDescribedby = true): array
@@ -591,6 +609,8 @@ final class FormCell extends Cell
 
     /**
      * Resolves the final HTML type for an `input` control.
+     *
+     * @param array<string, mixed> $item
      */
     private function resolveInputType(array $item): string
     {
@@ -616,6 +636,7 @@ final class FormCell extends Cell
     /**
      * Builds the HTML attributes for a `select` field.
      *
+     * @param array<string, mixed> $item
      * @return array<string, string>
      */
     private function buildSelectAttributes(array $item): array
@@ -674,6 +695,7 @@ final class FormCell extends Cell
     /**
      * Builds the HTML attributes for a `checkbox` or `radio` control.
      *
+     * @param array<string, mixed> $item
      * @return array<string, string>
      */
     private function buildCheckAttributes(array $item, string $type): array
@@ -720,6 +742,8 @@ final class FormCell extends Cell
 
     /**
      * Chooses the Bootstrap control class for the configured input type.
+     *
+     * @param array<string, mixed> $item
      */
     private function resolveControlClass(array $item): string
     {
@@ -730,6 +754,8 @@ final class FormCell extends Cell
 
     /**
      * Restricts the validation state to `valid`, `invalid`, or an empty string.
+     *
+     * @param array<string, mixed> $item
      */
     private function normalizeState(array $item): string
     {
@@ -740,6 +766,8 @@ final class FormCell extends Cell
 
     /**
      * Aggregates the ARIA ids linked to help and validation feedback.
+     *
+     * @param array<string, mixed> $item
      */
     private function buildDescribedBy(array $item): string
     {
@@ -756,6 +784,8 @@ final class FormCell extends Cell
 
     /**
      * Generates the help id from the field id.
+     *
+     * @param array<string, mixed> $item
      */
     private function resolveHelpId(array $item): string
     {
@@ -771,6 +801,8 @@ final class FormCell extends Cell
 
     /**
      * Generates the feedback id for the requested feedback type.
+     *
+     * @param array<string, mixed> $item
      */
     private function resolveFeedbackId(array $item, string $type): string
     {

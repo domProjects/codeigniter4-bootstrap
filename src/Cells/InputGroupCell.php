@@ -301,6 +301,8 @@ final class InputGroupCell extends Cell
 
     /**
      * Builds the classes for a text addon item.
+     *
+     * @param array<string, mixed> $item
      */
     private function buildAddonClasses(array $item): string
     {
@@ -316,6 +318,8 @@ final class InputGroupCell extends Cell
 
     /**
      * Builds the wrapper used for floating controls when needed.
+     *
+     * @param array<string, mixed> $item
      */
     private function buildControlWrapperClasses(array $item): string
     {
@@ -336,6 +340,7 @@ final class InputGroupCell extends Cell
     /**
      * Builds the attributes for a floating control label.
      *
+     * @param array<string, mixed> $item
      * @return array<string, string>
      */
     private function buildLabelAttributes(array $item): array
@@ -359,6 +364,7 @@ final class InputGroupCell extends Cell
     /**
      * Builds the attributes for validation feedback blocks.
      *
+     * @param array<string, mixed> $item
      * @return array<string, string>
      */
     private function buildFeedbackAttributes(array $item, string $type): array
@@ -381,6 +387,7 @@ final class InputGroupCell extends Cell
     /**
      * Builds the HTML attributes for a button inside the group.
      *
+     * @param array<string, mixed> $item
      * @return array<string, string>
      */
     private function buildButtonAttributes(array $item): array
@@ -414,6 +421,7 @@ final class InputGroupCell extends Cell
     /**
      * Builds the HTML attributes for an input or textarea control.
      *
+     * @param array<string, mixed> $item
      * @return array<string, string>
      */
     private function buildControlAttributes(array $item, string $kind): array
@@ -489,6 +497,8 @@ final class InputGroupCell extends Cell
 
     /**
      * Resolves the final HTML type for an input-group `input`.
+     *
+     * @param array<string, mixed> $item
      */
     private function resolveInputType(array $item): string
     {
@@ -509,6 +519,8 @@ final class InputGroupCell extends Cell
 
     /**
      * Restricts the validation state to `valid`, `invalid`, or an empty string.
+     *
+     * @param array<string, mixed> $item
      */
     private function normalizeState(array $item): string
     {
@@ -519,6 +531,8 @@ final class InputGroupCell extends Cell
 
     /**
      * Aggregates ARIA references tied to validation feedback.
+     *
+     * @param array<string, mixed> $item
      */
     private function buildDescribedBy(array $item): string
     {
@@ -540,6 +554,8 @@ final class InputGroupCell extends Cell
 
     /**
      * Generates the feedback id associated with a control.
+     *
+     * @param array<string, mixed> $item
      */
     private function resolveFeedbackId(array $item, string $type): string
     {
@@ -557,6 +573,7 @@ final class InputGroupCell extends Cell
     /**
      * Builds the HTML attributes for a `select` inside an input group.
      *
+     * @param array<string, mixed> $item
      * @return array<string, string>
      */
     private function buildSelectAttributes(array $item): array
