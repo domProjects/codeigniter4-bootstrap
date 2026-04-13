@@ -6,14 +6,20 @@
 [![Psalm](https://img.shields.io/github/actions/workflow/status/domProjects/codeigniter4-bootstrap/psalm.yml?branch=main&label=Psalm)](https://github.com/domProjects/codeigniter4-bootstrap/actions/workflows/psalm.yml)
 [![PHPStan](https://img.shields.io/github/actions/workflow/status/domProjects/codeigniter4-bootstrap/phpstan.yml?branch=main&label=PHPStan)](https://github.com/domProjects/codeigniter4-bootstrap/actions/workflows/phpstan.yml)
 
-Bootstrap 5 asset publisher for CodeIgniter 4.
+Bootstrap 5 tools for CodeIgniter 4.
 
-This package adds a Spark command that publishes the Bootstrap distribution files from Composer dependencies into your public directory.
+This package currently provides:
+
+- a Spark command that publishes the Bootstrap distribution files from Composer dependencies into your public directory
+- reusable CodeIgniter 4 Cells for Bootstrap components
+- CI4 helpers for validation-aware form payloads and table payload generation
 
 ## Features
 
 - Installs Bootstrap with Composer
 - Publishes only the Bootstrap production assets
+- Provides reusable Bootstrap component Cells for CodeIgniter 4 views
+- Includes helper functions for forms, validation, and tables
 - Works with CodeIgniter 4 auto-discovery
 - Keeps Bootstrap asset publication explicit and framework-oriented
 
@@ -81,37 +87,29 @@ Example in a CodeIgniter view:
 <script src="<?= base_url('assets/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 ```
 
-## Package Structure
+## Documentation
 
-```text
-src/
-  Commands/
-    PublishBootstrap.php
-  Publishers/
-    BootstrapPublisher.php
-```
+Detailed documentation now lives in the `docs/` directory:
 
-## Local Development
+- [Documentation Index](docs/index.md)
+- [Getting Started](docs/getting-started.md)
+- [Cells Reference](docs/cells/index.md)
+- [Cells Reference: Core Components](docs/cells/core-components.md)
+- [Cells Reference: Overlays and Navigation](docs/cells/overlays-and-navigation.md)
+- [Cells Reference: Forms and Data Display](docs/cells/forms-and-data.md)
+- [Helpers Reference](docs/helpers.md)
+- [Development Guide](docs/development.md)
 
-If you want to work on the package locally from another project, you can use a Composer `path` repository.
+## Included Cells
 
-Example:
+The package currently includes reusable Cells for:
 
-```json
-{
-    "repositories": {
-        "domprojects-codeigniter4-bootstrap": {
-            "type": "path",
-            "url": "packages/domprojects/codeigniter4-bootstrap",
-            "options": {
-                "symlink": false
-            }
-        }
-    }
-}
-```
+- alerts, badges, buttons, cards, images, figures, breadcrumbs, lists, and pagination
+- navigation and overlays such as navbars, dropdowns, tabs, accordions, modals, toasts, and offcanvas panels
+- utility components such as progress bars, spinners, placeholders, popovers, tooltips, and scrollspy blocks
+- forms, input groups, validation feedback, tables, and data display components
 
-If you also test the automation plugin locally, add a second `path` repository for `packages/domprojects/codeigniter4-bootstrap-plugin`.
+See the `docs/` directory for the full component reference and examples.
 
 ## Related Package
 
